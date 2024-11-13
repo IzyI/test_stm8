@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "stm8s.h": "c",
+        "stm8s_it.h": "c",
+        "main.h": "c",
+        "data.h": "c",
+        "stm8s_exti.h": "c",
+        
+    }
+}
