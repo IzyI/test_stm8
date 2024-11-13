@@ -33,7 +33,6 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm8s.h"
-#include "stm8s_exti.h"
 /* Uncomment the line below to enable peripheral header file inclusion */
 #if defined(STM8S105) || defined(STM8S005) || defined(STM8S103) || defined(STM8S003) ||\
     defined(STM8S001) || defined(STM8S903) || defined (STM8AF626x) || defined (STM8AF622x)
@@ -49,7 +48,7 @@
 // #include "stm8s_can.h"
 #endif /* (STM8S208) || (STM8AF52Ax) */
 //#include "stm8s_clk.h"
-//#include "stm8s_exti.h"
+#include "stm8s_exti.h"
 //#include "stm8s_flash.h"
 #include "stm8s_gpio.h"
 //#include "stm8s_i2c.h"

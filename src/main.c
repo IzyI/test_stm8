@@ -15,13 +15,15 @@ void Delay(uint16_t ms){
 
 void main(void)
 {
+    disableInterrupts();
   /* Initialize I/Os in Output Mode */
+  EXTI_DeInit();
   GPIO_Init(GPIOB, (GPIO_Pin_TypeDef)GPIO_PIN_5, GPIO_MODE_OUT_PP_LOW_FAST);
   GPIO_Init(GPIOA, (GPIO_Pin_TypeDef)GPIO_PIN_1, GPIO_MODE_OUT_PP_LOW_FAST);
   
   GPIO_Init(GPIOC, (GPIO_Pin_TypeDef)GPIO_PIN_3, GPIO_MODE_IN_PU_IT);
   
-  disableInterrupts();
+
   EXTI_SetExtIntSensitivity(EXTI_PORT_GPIOC, EXTI_SENSITIVITY_FALL_ONLY);
   enableInterrupts();
   // GPIO_WriteLow(GPIOD, (GPIO_Pin_TypeDef)GPIO_PIN_5);
@@ -34,12 +36,10 @@ void main(void)
         GPIO_WriteHigh(GPIOA, (GPIO_Pin_TypeDef)GPIO_PIN_1);
         Delay(100);
         GPIO_WriteLow(GPIOA, (GPIO_Pin_TypeDef)GPIO_PIN_1 );
-           statusButton=1;
-           EXTI_DeInit();
+        statusButton=1;
     }
     Delay(10);
-    
-       }
+    }
 
 }
 
