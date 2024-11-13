@@ -141,7 +141,7 @@ INTERRUPT_HANDLER(EXTI_PORTC_IRQHandler, 5)
 
     if ((GPIOC->IDR & GPIO_PIN_3 ) == 0){
     // Кнопка нажата, изменить статус
-      statusButton=1;
+      statusButton=0;
   }
 }
 
