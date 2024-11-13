@@ -1,3 +1,3 @@
 #include "stm8s.h"
 
-volatile uint32_t statusButton = 00;
+volatile uint32_t statusButton = 0;
