@@ -18,7 +18,9 @@ void main(void)
   /* Initialize I/Os in Output Mode */
   GPIO_Init(GPIOB, (GPIO_Pin_TypeDef)GPIO_PIN_5, GPIO_MODE_OUT_PP_LOW_FAST);
   GPIO_Init(GPIOA, (GPIO_Pin_TypeDef)GPIO_PIN_1, GPIO_MODE_OUT_PP_LOW_FAST);
+  
   GPIO_Init(GPIOC, (GPIO_Pin_TypeDef)GPIO_PIN_3, GPIO_MODE_IN_PU_IT);
+  
   disableInterrupts();
   EXTI_SetExtIntSensitivity(EXTI_PORT_GPIOC, EXTI_SENSITIVITY_FALL_ONLY);
   enableInterrupts();
@@ -36,7 +38,7 @@ void main(void)
            EXTI_DeInit();
     }
     Delay(10);
- 
+    
        }
 
 }

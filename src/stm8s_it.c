@@ -139,11 +139,13 @@ INTERRUPT_HANDLER(EXTI_PORTC_IRQHandler, 5)
      it is recommended to set a breakpoint on the following instruction.
   */
 
-    if ((GPIOC->IDR & GPIO_PIN_4 ) == 0){
+    if ((GPIOC->IDR & GPIO_PIN_3 ) == 0){
     // Кнопка нажата, изменить статус
       statusButton=1;
   }
 }
+
+
 
 /**
   * @brief  External Interrupt PORTD Interrupt routine
